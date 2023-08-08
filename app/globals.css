@@ -1,27 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-color: #c2c2c2;
+  --background-color: #1e1e1e;
+  --navbar-color: #2f2f2f;
+  --secondary-color: #f2e6d9;
+  --highlight-color: #bd7039;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-color: #c2c2c2;
+    --background-color: #1e1e1e;
+    --navbar-color: #2f2f2f;
+    --secondary-color: #f2e6d9;
+    --highlight-color: #bd7039;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-color);
+  background: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.MuiAppBar-root {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.MuiButton-root:hover {
+  background-color: var(--highlight-color);
+}
+
+.fill-screen {
+  padding: 20px;
+  height: 80vh;
+}
+
+.fill-parent {
+  width: calc(100% - 8vw*2);
+  height: calc(100% - 8vw*2);
+  margin: 8vw;
+}
+
+#myName {
+  color: var(--highlight-color);
+  font-weight: 500;
+  font-size: 8rem;
+}
+
+#fulltime {
+  color: var(--secondary-color);
+  font-size: 60px;
+  font-weight: 300;
+}
+
+#humanbeing {
+  margin-left: 15px;
+  color: var(--secondary-color);
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
 }

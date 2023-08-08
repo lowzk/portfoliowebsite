@@ -1,3 +1,6 @@
+import "./globals.css"
+import NavBar from "@/components/navbar";
+
 export default function RootLayout({
   children,
 }: {
@@ -13,8 +16,15 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
       </head>
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
