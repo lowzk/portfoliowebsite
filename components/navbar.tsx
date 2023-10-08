@@ -1,16 +1,12 @@
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "@mui/material/Link";
-import FaceIcon from '@mui/icons-material/Face';
 import AppsIcon from '@mui/icons-material/Apps';
-import AddCommentIcon from '@mui/icons-material/AddComment';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
-import { colors } from "@mui/material";
+import PortraitIcon from '@mui/icons-material/Portrait';
 
 function NavBar() {
   var buttonStyle = {bgcolor:"transparent", color:"#C2C2C2"}
@@ -32,30 +28,25 @@ function NavBar() {
           </Grid>
           <Grid item xs={4} />
           <Grid item xs={1.5} style={{ textAlign: "center" }}>
-            <Link href="/aboutme" underline="none">
-              <Button variant="contained" sx={buttonStyle} size="large" disableElevation endIcon={<FaceIcon/>}>
-                About me
+          </Grid>
+          <Grid item xs={1.5} style={{ textAlign: "center" }}>
+            <Link href="/" underline="none">
+              <Button variant="contained" sx={buttonStyle} size="large" disableElevation endIcon={<PortraitIcon/>}>
+                About Me
               </Button>
             </Link>
           </Grid>
           <Grid item xs={1.5} style={{ textAlign: "center" }}>
-            <Link href="/projects" underline="none">
+            <Link href="/portfolio" underline="none">
               <Button variant="contained" sx={buttonStyle} size="large" disableElevation endIcon={<AppsIcon/>}>
-                Projects
-              </Button>
-            </Link>
-          </Grid>
-          <Grid item xs={1.5} style={{ textAlign: "center" }}>
-            <Link href="/blog" underline="none">
-              <Button variant="contained" sx={buttonStyle} size="large" disableElevation endIcon={<AddCommentIcon/>}>
-                Blog
+                Portfolio
               </Button>
             </Link>
           </Grid>
           <Grid item xs={1.5} style={{ textAlign: "center" }}>
             <Link href="/contactme" underline="none">
               <Button variant="contained" sx={buttonStyle} size="large" disableElevation endIcon={<PermContactCalendarIcon/>}>
-                Contact me
+                Contact
               </Button>
             </Link>
           </Grid>

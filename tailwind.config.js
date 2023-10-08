@@ -12,6 +12,7 @@ module.exports = {
         background: '#1e1e1e',
         highlight: '#bd7039',
         secondary: '#f2e6d9',
+        background2: "#303030",
       },
     },
   },

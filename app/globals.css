@@ -6,6 +6,7 @@
 :root {
   --foreground-color: #c2c2c2;
   --background-color: #1e1e1e;
+  --background-color-2: #3f3f3f;
   --navbar-color: #2f2f2f;
   --secondary-color: #f2e6d9;
   --highlight-color: #bd7039;
@@ -36,6 +37,7 @@ body {
 
 .MuiButton-root:hover {
   background-color: var(--highlight-color);
+  color: var(--secondary-color)
 }
 
 .fill-screen {
@@ -55,6 +57,12 @@ body {
   font-size: 8rem;
 }
 
+#subHeader {
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 5rem;
+}
+
 #fulltime {
   color: var(--secondary-color);
   font-size: 60px;
@@ -69,3 +77,14 @@ body {
   position: relative;
   top: 0;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-to-grey {
+  background: linear-gradient(to bottom, var(--background-color), var(--background-color-2));
+}
+

@@ -1,0 +1,25 @@
+:root {
+    --foreground-color: #c2c2c2;
+    --background-color: #1e1e1e;
+    --background-color-2: #3f3f3f;
+    --navbar-color: #2f2f2f;
+    --secondary-color: #f2e6d9;
+    --highlight-color: #bd7039;
+  }
+
+.header {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.subheader {
+    color: var(--secondary-color);
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.vertical-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

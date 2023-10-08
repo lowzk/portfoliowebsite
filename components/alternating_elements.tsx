@@ -9,16 +9,10 @@ function AlternatingElements() {
           <span>software dev,</span>
         </li>
         <li>
-          <span>cs student,</span>
-        </li>
-        <li>
           <span>musician,</span>
         </li>
         <li>
           <span>data analyst,</span>
-        </li>
-        <li>
-          <span>software dev,</span>
         </li>
         <li>
           <span>barista,</span>
