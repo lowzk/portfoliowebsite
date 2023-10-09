@@ -1,0 +1,68 @@
+:root {
+    --foreground-color: #c2c2c2;
+    --background-color: #1e1e1e;
+    --background-color-2: #303030;
+    --navbar-color: #2f2f2f;
+    --secondary-color: #f2e6d9;
+    --highlight-color: #bd7039;
+}
+
+.header {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.subheader {
+    color: var(--foreground-color);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.image {
+    width: 100%;
+    opacity: 0.9;
+}
+
+.image:hover{
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.image-logo {
+    height: 100%;
+    opacity: 0.9;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.image-logo:hover {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    transform: scale(1.02);
+}
+
+.custom-padding {
+    padding: 0.5rem;
+}
+
+.writeup {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.writeup:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.writeup-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+    align-self: flex-start;
+}

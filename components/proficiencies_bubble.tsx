@@ -3,11 +3,12 @@ import './proficiencies.css'
 interface ProfProps {
     children: React.ReactNode;
     prof_list: string[];
+    style?: React.CSSProperties;
 }
 
-function ProficienciesBubble({children, prof_list}: ProfProps) {
+function ProficienciesBubble({children, prof_list, style}: ProfProps) {
     return (
-        <div className="proficiency-container">
+        <div className="proficiency-container" style={style}>
           <div className="proficiency-header">{children}</div>
           <div className="proficiency-list">
             {prof_list.map((proficiency, index) => (
