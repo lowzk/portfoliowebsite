@@ -19,19 +19,19 @@ export async function POST(request: Request) {
                 pass: process.env.PASSWORD
             }
         });
-    
+
         const mailOptions = {
             from: myEmail,
             to: myEmail,
             subject: `Message from ${name} (${email})`,
             text: message
         };
-    
-        await transporter.sendMail(mailOptions);
-        
-        return Response.json({message:"Email sent successfully"}, {status: 200});
-    } catch (error) {
-        return Response.json({message:"Email failed to send"}, {status: 500});
-    }
 
-} 
+        await transporter.sendMail(mailOptions);
+
+        return new Response(JSON.stringify({ message: "Email sent successfully" }), { status: 200 });
+    } catch (error) {
+        // Handle error
+        return new Response(JSON.stringify({ message: "Email failed to send" }), { status: 500 });
+    }
+}
