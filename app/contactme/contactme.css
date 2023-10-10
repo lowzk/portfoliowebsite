@@ -1,0 +1,17 @@
+.header {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.subheader {
+    color: var(--secondary-color);
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footerIcon2 {
+    margin: 0px 10px 20px 10px;
+    font-size: 2rem;
+}

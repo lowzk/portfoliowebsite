@@ -17,7 +17,7 @@ function NavBar() {
       <Toolbar>
         <Grid container alignItems="center">
           <Grid item xs={1.5} />
-          <Grid item xs={2}>
+          <Grid item xs={1.5}>
             <Link href="/" className="flex items-center">
               <Image
                 src="/../public/navbar_icon.png"
@@ -28,7 +28,7 @@ function NavBar() {
               />
             </Link>
           </Grid>
-          <Grid item xs={1.5} />
+          <Grid item xs={0.75} />
           <Grid item xs={1.5} style={{ textAlign: "center" }}>
             <Link href="/" underline="none">
               <Button variant="contained" sx={buttonStyle} size="large" disableElevation endIcon={<PortraitIcon/>}>
@@ -50,8 +50,13 @@ function NavBar() {
               </Button>
             </Link>
           </Grid>
+          <Grid item xs={0.75} />
           <Grid item xs={1} style={{ textAlign: "center" }}>
-            <h1>Settings Placeholder</h1>
+              <Link href="https://drive.google.com/file/d/1DIbU_8MMOvW1jC_e-144q4vVKr6SxHtc/view?usp=sharing" target="_blank" underline="none">
+                <Button variant="outlined" className="resume" size="large" disableElevation>
+                  Resume
+                </Button>
+            </Link>
           </Grid>
           <Grid item xs={1.5} />
         </Grid>

@@ -124,7 +124,7 @@ export default function Page() {
       </div>
       <div style={{height:"5vh"}} className="gradient-to-grey"></div>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} className="grey-background">
-        <Typography className="header1">projects & competitions</Typography>
+        <Typography className="header1"><span className="underline text-highlight">projects</span> & competitions</Typography>
         <HorizontalScroll jobs={projects} flipped={true}/>
       </div>
     </div>);

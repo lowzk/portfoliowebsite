@@ -3,9 +3,7 @@
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import AddCommentIcon from '@mui/icons-material/AddComment';
 import './footer.css'
-import { GitHub } from '@mui/icons-material';
 
 function Footer() {
     return (
