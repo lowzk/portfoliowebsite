@@ -4,14 +4,14 @@ import Typography from "@mui/material/Typography";
 import ProficienciesBubble from "./proficiencies_bubble";
 import NotePad from "./notepad";
 import Image from "next/image";
-import "./job_display.css"
 import Link from "next/link";
+import "./job_display.css"
 
 interface JobDisplayProps {
     job: Job;
 }
 
-const JobDisplay = ({ job }: JobDisplayProps) => {
+const FlippedJobDisplay = ({ job }: JobDisplayProps) => {
     const photograph = job.photograph;
     const logo = job.company_logo;
     const company = job.company;
@@ -29,10 +29,15 @@ const JobDisplay = ({ job }: JobDisplayProps) => {
     const color = job.color;
     const website_link = job.website_link;
 
-
     return (
         <div>
             <Grid container spacing={0}>
+                {/* Relevant skills */}
+                <Grid item xs={6} className="custom-padding">
+                    <ProficienciesBubble prof_list={relevant_skills}
+                        style={{ backgroundColor: color }}>Relevant Skills</ProficienciesBubble>
+                </Grid>
+
                 {/* Job title, company and date */}
                 <Grid item xs={6} className="custom-padding">
                     <Grid container spacing={2}>
@@ -52,17 +57,22 @@ const JobDisplay = ({ job }: JobDisplayProps) => {
                                 </div>
                             </Link>
                         </Grid>
-
                     </Grid>
                 </Grid>
 
-                {/* Relevant skills */}
+                {/* Photograph */}
                 <Grid item xs={6} className="custom-padding">
-                    <ProficienciesBubble prof_list={relevant_skills}
-                        style={{ backgroundColor: color }}>Relevant Skills</ProficienciesBubble>
+                    <div className="writeup" style={{ backgroundColor: color }}>
+                        <p className="writeup-header">What is it about?</p>
+                        <ul>
+                            {sentences.map((sentence, index) => (
+                                <li key={index} style={{ marginBottom: '12px' }}>{sentence}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </Grid>
 
-                {/* Photograph */}
+                {/* Write up */}
                 <Grid item xs={6} className="custom-padding">
                     <Link href={website_link} target="_blank">
                         <Image
@@ -72,21 +82,9 @@ const JobDisplay = ({ job }: JobDisplayProps) => {
                         />
                     </Link>
                 </Grid>
-
-                {/* Write up */}
-                <Grid item xs={6} className="custom-padding">
-                    <div className="writeup" style={{ backgroundColor: color }}>
-                        <p className="writeup-header">How did I contribute?</p>
-                        <ul>
-                            {sentences.map((sentence, index) => (
-                                <li key={index} style={{ marginBottom: '12px' }}>{sentence}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </Grid>
             </Grid>
         </div>
     )
 }
 
-export default JobDisplay;
+export default FlippedJobDisplay;

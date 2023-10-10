@@ -87,3 +87,7 @@ body {
 .gradient-to-grey {
   background: linear-gradient(to bottom, var(--background-color), var(--background-color-2));
 }
+
+.grey-background {
+  background: var(--background-color-2)
+}

@@ -1,29 +1,27 @@
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image
 
-def apply_soft_edges(input_image_path, output_image_path, border_radius=30):
-    # Open the original image
-    original = Image.open(input_image_path).convert("RGBA")
-    
-    # Create a blank white RGBA image
-    white_img = Image.new("RGBA", original.size, (255, 255, 255, 255))
-    
-    # Use alpha transparency to create a mask with soft edges
-    mask = Image.new("L", original.size, 0)
-    mask_draw = ImageDraw.Draw(mask)
-    mask_draw.ellipse(
-        (0, 0, original.size[0], original.size[1]),
-        fill=255,
-    )
-    
-    # Blur the mask to get the soft edges
-    mask = mask.filter(ImageFilter.GaussianBlur(border_radius))
-    
-    # Composite the original image and the white image using the mask
-    soft_edge_image = Image.composite(original, white_img, mask)
-    
-    # Save the resulting image
-    soft_edge_image.save(output_image_path)
+# Open the image
+image = Image.open("./public/navbar_icon.png")
 
+# Get the color of the top left pixel
+color = image.getpixel((0, 0))
 
-# Test the function
-apply_soft_edges("./public/cpf_team.jpeg", "output.png")
+# Create a new image with a transparent background
+transparent_image = Image.new("RGBA", image.size, (0, 0, 0, 0))
+
+# Loop through each pixel in the image
+for x in range(image.width):
+    for y in range(image.height):
+        # Get the color of the current pixel
+        pixel_color = image.getpixel((x, y))
+        
+        # If the color of the current pixel matches the color of the top left pixel
+        if pixel_color == color:
+            # Set the pixel in the transparent image to transparent
+            transparent_image.putpixel((x, y), (0, 0, 0, 0))
+        else:
+            # Set the pixel in the transparent image to the color of the current pixel
+            transparent_image.putpixel((x, y), pixel_color)
+
+# Save the resulting image
+transparent_image.save("./public/navbar_icon.png")
