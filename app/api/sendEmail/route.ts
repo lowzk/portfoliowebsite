@@ -34,4 +34,4 @@ export async function POST(request: Request) {
         // Handle error
         return new Response(JSON.stringify({ message: "Email failed to send" }), { status: 500 });
     }
-}
+}``

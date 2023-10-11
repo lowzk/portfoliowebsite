@@ -7,6 +7,7 @@ import Link from "@mui/material/Link";
 import AppsIcon from '@mui/icons-material/Apps';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import PortraitIcon from '@mui/icons-material/Portrait';
+import navbar_icon from '../public/navbar_icon.png'
 import "./navbar.css";
 
 function NavBar() {
@@ -20,7 +21,7 @@ function NavBar() {
           <Grid item xs={1.5}>
             <Link href="/" className="flex items-center">
               <Image
-                src="/../public/navbar_icon.png"
+                src={navbar_icon}
                 alt="Coffee Logo"
                 width={180}
                 height={50}

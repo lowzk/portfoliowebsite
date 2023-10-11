@@ -1,5 +1,7 @@
+"use client"
+
 import Image from "next/image";
-import border from "../public/border.svg";
+import border from "../public/border.png";
 import Typography from "@mui/material/Typography";
 import AlternatingElements from "@/components/alternating_elements";
 import NotePad from "@/components/notepad";
@@ -8,15 +10,25 @@ import Link from "@mui/material/Link";
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import { colors } from "@mui/material";
-import coffeemug from "../public/LowZheKai_coffeemug.png"
+import coffee from "../public/lzk_coffee.png"
 import Header from "@/components/header";
 import ProficienciesGrid from "@/components/proficiencies_grid";
 
 export default function Page() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div>
-      <div className="m-10 relative fill-screen">
+      <div className="custom-margin relative fill-screen">
         <Image
           src={border}
           alt=""
@@ -27,7 +39,7 @@ export default function Page() {
 
         <div className="fill-parent">
           <div>
-            <Typography variant="h4">Hey there! I am</Typography>
+            <Typography variant="h4" className="text-secondary">Hey there! I am</Typography>
             <Typography variant="h1" className="text-highlight" id="myName">
               Zhe Kai!
             </Typography>
@@ -47,7 +59,7 @@ export default function Page() {
               </Link>
               </div>
               <div className="flex mr-4">
-              <Link href="/projects" underline="none" className="mr-4">
+              <Link href="#section0" underline="none" className="mr-4" onClick={handleScroll}>
               <Button variant="outlined" color="inherit" className="text-foreground" size="large" disableElevation startIcon={<ConnectWithoutContactIcon />}>
                   Find out more
                 </Button>
@@ -66,24 +78,25 @@ export default function Page() {
           className="rotate-180 absolute bottom-0 right-0"
         />
         <Image
-          src={coffeemug}
+          src={coffee}
           alt=""
-          width={300}
+          width={250}
           height={300}
-           className="absolute top-10 right-10"
+          className="absolute top-0 right-0 coffee"
         />
       </div>
+      <div className="bg-background" style={{height:'50px'}} id="section0"/>
       <div className="flex-container gradient-to-grey">
           <NotePad>Hello world, my name is Zhe Kai! I'm a penultimate-year student majoring in Computer Science 
             studying in the Renaissance Engineering Programme in NTU. <br/><br/>
             I'm also an aspiring Software Engineer and I honestly just love to build cool things that make a difference in other's lives. Thanks for dropping by!
           </NotePad>
       </div>
-      <div className="bg-background2" style={{height:'100px'}}></div>
-      <div className="bg-background2 items-center" style={{paddingBottom:'60px'}}>
+      <div className="bg-background2" style={{height:'50px'}}/>
+      <div className="bg-background2 items-center" style={{paddingBottom:'50px'}}>
         <Header/>
         <ProficienciesGrid/>
       </div>
     </div>
   );
-}
+}``

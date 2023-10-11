@@ -42,9 +42,11 @@ const FlippedJobDisplay = ({ job }: JobDisplayProps) => {
                 <Grid item xs={6} className="custom-padding">
                     <Grid container spacing={2}>
                         <Grid item xs={9} className="custom-padding">
+                        <Link href={website_link} target="_blank">
                             <Typography className="header">{job_title}</Typography>
                             <Typography className="subheader">{company}</Typography>
                             <Typography className="subheader">{date}</Typography>
+                        </Link>
                         </Grid>
                         <Grid item xs={3}>
                             <Link href={website_link} target="_blank">
@@ -53,6 +55,7 @@ const FlippedJobDisplay = ({ job }: JobDisplayProps) => {
                                         src={logo}
                                         alt=""
                                         className="image-logo"
+                                        priority
                                     />
                                 </div>
                             </Link>
@@ -79,6 +82,7 @@ const FlippedJobDisplay = ({ job }: JobDisplayProps) => {
                             src={photograph}
                             alt=""
                             className="image"
+                            priority
                         />
                     </Link>
                 </Grid>
