@@ -39,7 +39,7 @@ export default function Page() {
 
         <div className="fill-parent">
           <div>
-            <Typography variant="h4" className="text-secondary">Hey there! I am</Typography>
+            <Typography variant="h4" className="text-secondary" style={{fontSize:"2vw"}}>Hey there! I am</Typography>
             <Typography variant="h1" className="text-highlight" id="myName">
               Zhe Kai!
             </Typography>

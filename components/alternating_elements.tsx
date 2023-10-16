@@ -15,13 +15,10 @@ function AlternatingElements() {
           <span>data analyst,</span>
         </li>
         <li>
+          <span>student,</span>
+        </li>
+        <li>
           <span>barista,</span>
-        </li>
-        <li>
-          <span>photographer,</span>
-        </li>
-        <li>
-          <span>shuttler,</span>
         </li>
       </ul>
     </div>

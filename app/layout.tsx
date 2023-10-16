@@ -1,8 +1,8 @@
 import "./globals.css"
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Head from "next/head";
 import { Analytics } from '@vercel/analytics/react';
-
 
 export default function RootLayout({
   children,
@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>Home</title>
         <link
           rel="icon"
@@ -23,12 +23,12 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
-      </head>
+      </Head>
       <body>
         <NavBar />
         {children}
-        <Analytics />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

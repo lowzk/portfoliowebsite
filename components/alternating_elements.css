@@ -3,33 +3,48 @@
 }
 .wrapper .static-txt {
   color: var(--secondary-color);
-  font-size: 60px;
+  font-size: 4vw; /* 60px */
   font-weight: 300;
 }
 .wrapper .dynamic-txts {
   margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
+  height: calc(4vw * 3 / 2);
+  line-height: calc(4vw * 3 / 2);
   overflow: hidden;
 }
 .dynamic-txts li {
   list-style: none;
   color: var(--secondary-color);
-  font-size: 60px;
+  font-size: 4vw;
   font-weight: 500;
   position: relative;
   top: 0;
-  animation: slide 12s steps(4) infinite;
+  animation: slide 15s steps(1) infinite;
 }
 @keyframes slide {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: calc(-6vw * 1); /* Enter number of elements here */
+  }
+  40% {
+    top: calc(-6vw * 2);
+  }
+  60% {
+    top: calc(-6vw * 3); 
+  }
+  80% {
+    top: calc(-6vw * 4); 
+  }
   100% {
-    top: -360px;
+    top: calc(-6vw * 5);
   }
 }
 .dynamic-txts li span {
   position: relative;
   margin: 5px 0;
-  line-height: 90px;
+  line-height: 6vw;
 }
 .dynamic-txts li span::after {
   content: "";
@@ -49,4 +64,4 @@
   100% {
     left: 0;
   }
-}
+} 

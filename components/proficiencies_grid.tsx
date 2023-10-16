@@ -5,7 +5,7 @@ import './proficiencies.css'
 function ProficienciesGrid() {
     var languages = ["Python", "Javascript", "Typescript", "SQL", "HTML/CSS", "Java", "C/C++"]
     var frontend = ["Next.js", "React.js",  "Tailwind", "Material-UI", "Bootstrap"]
-    var backend = ["PostgreSQL", "Firebase", "Node.js", "Express.js", "FastAPI", "Next.js"]
+    var backend = ["PostgreSQL", "Firebase", "Node.js", "Express.js", "FastAPI", "Next.js", "Postman"]
     var data_analytics = ["Langchain", "OpenAI", "scikit-learn", "pandas", "NumPy", "Matplotlib", "librosa", "spacy", "pytesseract"]
     var devops = ["Microsoft Azure", "Docker", "Git", "Github", "Gitlab", "Heroku"]
     var others = ["Statistics", "English", "Mandarin", "Electic Guitar", "Piano", "Drums", "Singing", "Brewing coffee", "Badminton", "Photography"]
