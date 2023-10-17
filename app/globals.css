@@ -46,9 +46,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 600px) {
-  
-}
 
 .MuiAppBar-root {
   padding-left: 2vw;
